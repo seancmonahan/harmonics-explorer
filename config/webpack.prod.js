@@ -11,18 +11,14 @@ module.exports = webpackMerge(commonConfig, {
     'vendor': './src/vendor.ts',
     'app': './src/main.ts'
   },
-  
+
   devtool: 'source-map',
 
   output: {
     path: helpers.root('dist'),
-    publicPath: '/',
+    publicPath: '',
     filename: '[name].[hash].js',
     chunkFilename: '[id].[hash].chunk.js'
-  },
-
-  htmlLoader: {
-    minimize: false // workaround for ng2
   },
 
   plugins: [
@@ -30,7 +26,13 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
-      debug: false
+      debug: false,
+      options: {
+        htmlLoader: {
+          minimize: false // workaround for ng2
+        },
+        resolve: {}
+      }
     }),
     new webpack.DefinePlugin({
       'process.env': {

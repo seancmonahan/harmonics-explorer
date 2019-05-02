@@ -17,6 +17,22 @@ This also serves as an example codebase of the following tech stack:
 
 I've added various comments to the code so if you want to see how the project works, I hope you'll find everything you need.
 
+### Compiling
+
+To compile change to the root directory and run
+
+```
+yarn
+```
+
+to install dependencies and
+
+```
+yarn run build
+```
+
+to build the files.
+
 ### License
 
 ISC License
