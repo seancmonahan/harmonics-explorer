@@ -22,7 +22,7 @@
                 [frequency]=partial.frequency
                 (gainChange)="amplitudeChange.next({partial: i, amplitude: $event})">
       <div class="partial-label">
-        {{ roundFrequency(partial.frequency) }}Hz
+        ×{{ partial.factor }}&nbsp;({{ roundFrequency(partial.frequency) }}Hz)
       </div>
     </hs-partial>
   </div>

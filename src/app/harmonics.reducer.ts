@@ -61,6 +61,7 @@ function makeInitialState() {
 // Initial Partials, invoked for each harmonic from makeInitialState
 function makePartial(fundamentalFrequency: number, partial: number) {
   return partialFactory({
+    factor: partial,
     frequency: fundamentalFrequency * partial, // Each harmonic is an integer multiple of the fundamental frequency.
     amplitude: partial === 1 ? 1 : 0 // Only the fundamental is on by default.
   });

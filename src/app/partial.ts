@@ -8,6 +8,7 @@ import { List } from 'immutable';
 // This is to be imported wherever a reference to a partial is used
 // (reducers, components, services...) 
 export interface Partial {
+  factor: number; // The factor relative to the fundamental
   frequency: number; // The (calculated) frequency of the partial
   amplitude: number; // The (user defined) amplitude of the partial
 }
@@ -20,6 +21,7 @@ export interface PartialRecord extends TypedRecord<PartialRecord>, Partial { }
 
 // An Immutable.js record factory for the record.
 export const partialFactory = makeTypedFactory<Partial, PartialRecord>({
+  factor: 1,
   frequency: 440,
   amplitude: 1
 });
