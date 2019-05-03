@@ -1,6 +1,7 @@
 /*
  * Main/top menu component.
  */
+declare const IMAGINARY: any;
 import {
   ChangeDetectionStrategy,
   Component,
@@ -28,6 +29,8 @@ export class MainMenuComponent {
   @Input() fundamentalFrequency: number;
   @Output() fundamentalFrequencyChange = new EventEmitter<number>();
 
+  text = IMAGINARY.i18n.getStrings();
+
   switchToSine() {
     this.switchToPreset.next(Preset.Sine);
   }
@@ -40,4 +43,8 @@ export class MainMenuComponent {
     this.switchToPreset.next(Preset.Square);
   }
 
+  switchLanguage(langCode : string) {
+    IMAGINARY.i18n.setLang(langCode);
+    this.text = IMAGINARY.i18n.getStrings();
+  }
 }

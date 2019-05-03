@@ -1,18 +1,26 @@
 <header>
   <hs-mute-control [playing]="playing"
                     (start)="start.next()"
-                    (stop)="stop.next()">
+                    (stop)="stop.next()"
+                   [text]="{ MUTE: text.MUTE, UNMUTE: text.UNMUTE }"
+  >
   </hs-mute-control>
   <button md-button (click)="switchToSine()">
-    Base sine
+    {{ text.BASE_SINE }}
   </button>
   <button md-button (click)="switchToSquare()">
-    Square
+    {{ text.SQUARE }}
   </button>
   <button md-button (click)="switchToSawTooth()">
-    Sawtooth
+    {{ text.SAWTOOTH }}
   </button>
   <hs-note-control [frequency]="fundamentalFrequency"
                     (frequencyChange)="fundamentalFrequencyChange.next($event)">
   </hs-note-control>
+  <button md-button class="language-button" (click)="switchLanguage('de')">
+    Deutsch
+  </button>
+  <button md-button class="language-button" (click)="switchLanguage('en')">
+    English
+  </button>
 </header>

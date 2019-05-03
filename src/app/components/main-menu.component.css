@@ -18,6 +18,10 @@ header /deep/ .label {
   font-weight: bold;
 }
 
+header /deep/ .language-button {
+  float: right;
+}
+
 .gh-button {
   float: right;
   margin: .5em;

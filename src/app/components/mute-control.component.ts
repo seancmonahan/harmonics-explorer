@@ -20,6 +20,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MuteControlComponent {
+  @Input() text: any;
   @Input() playing: boolean;
   @Output() start = new EventEmitter<any>();
   @Output() stop = new EventEmitter<any>();

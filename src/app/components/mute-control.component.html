@@ -1,6 +1,6 @@
 <button md-button *ngIf="!playing" (click)="start.next()">
-  <md-icon>volume_up</md-icon> Unmute
+  <md-icon>volume_up</md-icon> {{ text.UNMUTE }}
 </button>
 <button md-button *ngIf="playing" (click)="stop.next()">
-  <md-icon>volume_off</md-icon> Mute
+  <md-icon>volume_off</md-icon> {{ text.MUTE }}
 </button>
