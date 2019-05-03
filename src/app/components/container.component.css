@@ -1,7 +1,7 @@
 .main {
   position: fixed;
   top: 0;
-  bottom: 60px;
+  bottom: 90px;
   width: 100%;
 }
 .fundamental {
@@ -25,8 +25,6 @@
 }
 .harmonics hs-partial.even {
   background-color: #f6f6f6;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
 }
 .partial-label {
   text-align: right;

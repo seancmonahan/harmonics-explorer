@@ -9,8 +9,12 @@ body {
     -webkit-user-select: none;
     -o-user-select: none;
     user-select: none;
+    font-family: Quicksand, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333;
 }
 
 *:focus {
     outline: none !important;
 }
+
