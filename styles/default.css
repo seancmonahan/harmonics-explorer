@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed; // Needed to avoid scroll in iOS
+    -webkit-touch-callout: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: none !important;
+}

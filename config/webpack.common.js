@@ -47,6 +47,7 @@ module.exports = {
 
     new CopyPlugin([
       'vendor/**/*',
+      'styles/**/*',
     ])
   ]
 };
