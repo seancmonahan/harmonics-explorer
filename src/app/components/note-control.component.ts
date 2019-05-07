@@ -11,13 +11,18 @@ import { NoteService } from '../services/note.service';
 })
 export class NoteControlComponent {
   @Input() frequency: number;
+  @Input() text: any;
   @Output() frequencyChange = new EventEmitter<number>();
 
   constructor(private notes: NoteService) {
   }
 
   getFrequencyNote() {
-    return this.notes.getNote(this.frequency);
+    const noteName = this.notes.getNote(this.frequency);
+    if (this.text[noteName] !== undefined) {
+      return this.text[noteName];
+    }
+    return noteName;
   }
 
   canDecrease() {

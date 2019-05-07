@@ -15,12 +15,9 @@ if (process.env.ENV === 'production') {
 IMAGINARY.i18n.init({
   queryStringVariable: 'lang',
   translationsDirectory: 'tr',
-  defaultLanguage: 'de',
-  fallbackToDefaultLanguage: false // Current version of i18n is buggy unless this is set to false
+  defaultLanguage: 'en'
 }).then(function(){
-  return IMAGINARY.i18n.loadLang('de');
-}).then(function(){
-  return IMAGINARY.i18n.loadLang('en');
+  return IMAGINARY.i18n.setLang('de');
 }).then(function(){
   platformBrowserDynamic()
     .bootstrapModule(AppModule);

@@ -15,7 +15,9 @@
     {{ text.SAWTOOTH }}
   </button>
   <hs-note-control [frequency]="fundamentalFrequency"
-                    (frequencyChange)="fundamentalFrequencyChange.next($event)">
+                    (frequencyChange)="fundamentalFrequencyChange.next($event)"
+                   [text]="text"
+  >
   </hs-note-control>
   <button md-button class="language-button" (click)="switchLanguage('de')">
     Deutsch
