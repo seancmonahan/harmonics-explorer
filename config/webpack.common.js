@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var DashboardPlugin = require('webpack-dashboard/plugin');
+// TODO: move DashboardPlugin into dev build because it hangs prod build
+// var DashboardPlugin = require('webpack-dashboard/plugin');
 var CopyPlugin = require('copy-webpack-plugin');
 var helpers = require('./helpers');
 
@@ -35,7 +36,8 @@ module.exports = {
   },
 
   plugins: [
-    new DashboardPlugin(),
+    // TODO: move DashboardPlugin into dev build because it hangs prod build
+    // new DashboardPlugin(),
 
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
