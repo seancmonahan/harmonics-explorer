@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server --inline --hot --progress --port 8080",
-    "build": "rimraf dist && webpack --hide-modules --config config/webpack.prod.js --progress --profile --bail"
+    "build": "rimraf dist && webpack --hide-modules --config config/webpack.prod.js 2>/dev/null >/dev/null"
   },
   "license": "ISC",
   "dependencies": {
